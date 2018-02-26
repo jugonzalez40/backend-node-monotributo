@@ -1,6 +1,6 @@
 {
 	"server": "localhost",
-	"databse": "node-prueba",
-	"user": "sa",
-	"password": "sa"
+	"databse": "mono",
+	"user": "root",
+	"password": "monotrib123"
 }

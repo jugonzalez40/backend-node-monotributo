@@ -7,7 +7,7 @@
     "test": "mocha --compilers js:babel-register",
     "start": "nodemon --exec babel-node app.js --presets env,stage-2"
   },
-  "author": "",
+  "author": "BRAYAN PACHECO  danilopachecot96@gmail.com", 
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -21,6 +21,7 @@
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "morgan": "^1.9.0",
-    "mssql": "^4.1.0"
+    "mssql": "^4.1.0",
+    "mysql": "^2.15.0"
   }
 }
