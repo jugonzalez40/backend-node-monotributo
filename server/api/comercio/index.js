@@ -1,10 +1,10 @@
 import express from 'express';
 
-class Test {
+class Comercio {
 	constructor(dbConnection) {
 		this.db = dbConnection;
 		this.router = express.Router();
-		this.path = '/test';
+		this.path = '/comercio';
 		//
 		this.router.get(this.path, this.get);
 		this.router.get(`${this.path}/:id`, this.getById);
@@ -18,28 +18,28 @@ class Test {
 
 	getById(req, res, next) {
 		let m = req.params + parseInt(req.params.kj);
-			res.send(`Test by id: ${m}`);
+			res.send(`comercio by id: ${m}`);
 	}
 
 	get(req, res, next) {
-		res.send('Test get');
+		res.send('comercio get');
 	}
 
 	post(req, res, next) {
-		res.send('Test post');
+		res.send('comercio post');
 	}
 
 	put(req, res, next) {
-		res.send('Test put');
+		res.send('comercio put');
 	}
 
 	patch(req, res, next) {
-		res.send('Test patch');
+		res.send('comercio patch');
 	}
 
 	delete(req, res, next) {
-		res.send('Test delete');
+		res.send('comercio delete');
 	}
 }
 
-module.exports = Test;
+module.exports = Comercio;

@@ -1,6 +1,6 @@
 {
-	"server": "localhost",
-	"databse": "node-prueba",
+	"server": "localhost\\SQLEXPRESS",
+	"databse": "mono",
 	"user": "sa",
 	"password": "sa"
 }
