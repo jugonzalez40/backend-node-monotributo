@@ -1,8 +1,16 @@
 import express from 'express';
+import Ructor from '../ructor.js'
 
 class Contribuyente {
-	constructor(dbConnection) {
-		this.db = dbConnection;
+	constructor() {
+		this.db = new Ructor('contribuyente');
+		//
+		this.get = this.get.bind(this);
+		this.post = this.post.bind(this);
+		this.put = this.put.bind(this);
+		this.patch = this.patch.bind(this);
+		this.delete = this.delete.bind(this);
+		//
 		this.router = express.Router();
 		this.path = '/contribuyente';
 		//
@@ -18,19 +26,25 @@ class Contribuyente {
 
 	getById(req, res, next) {
 		let m = req.params + parseInt(req.params.kj);
-			res.send(`contribuyente by id: ${m}`);
+		res.send(`contribuyente by id: ${m}`);
 	}
 
 	get(req, res, next) {
-		res.send('contribuyente get');
+		this.db.all().then((result) => {
+			res.send(result.recordset);
+		});
 	}
 
 	post(req, res, next) {
-		res.send('contribuyente post');
+		this.db.insert(req.body.val).then((result) => {
+			res.send(result.recordset);
+		});
 	}
 
 	put(req, res, next) {
-		res.send('contribuyente put');
+		this.db.update(req.body.val).then((result) => {
+			res.send(result.recordset);
+		});
 	}
 
 	patch(req, res, next) {

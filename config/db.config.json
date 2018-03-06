@@ -1,6 +1,7 @@
 {
 	"server": "localhost\\SQLEXPRESS",
-	"databse": "mono",
-	"user": "sa",
-	"password": "sa"
+	"database": "mono",
+	"db":"mono",
+	"user": "smp",
+	"password": "smp"
 }

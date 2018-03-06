@@ -2,7 +2,6 @@ import express from 'express';
 
 class Comercio {
 	constructor(dbConnection) {
-		this.db = dbConnection;
 		this.router = express.Router();
 		this.path = '/comercio';
 		//
